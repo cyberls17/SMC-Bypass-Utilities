@@ -1,6 +1,6 @@
 Set-ExecutionPolicy Bypass
 
-Write-Output "WebKeeper  ºñÈ°¼ºÈ­ ÇÁ·Î±×·¥"
+Write-Output "WebKeeper  ë¹„í™œì„±í™” í”„ë¡œê·¸ë¨"
 Write-Output "Made by cyberls17"
 
 $ACL = Get-Acl -Path "C:\Program Files\Somansa\PcBoanCare\"
@@ -24,10 +24,10 @@ $ACL | Set-Acl -Path "C:\Program Files\Somansa\PcBoanCare\"
 $ACL.SetAccessRule($ReadExtendedAttributes)
 $ACL | Set-Acl -Path "C:\Program Files\Somansa\PcBoanCare\"
 
-Write-Output "WebKeeper°¡ ºñÈ°¼ºÈ­µÊ"
-Write-Output "WebKeeper ÇÁ·Î±×·¥ Á¾·á¸¦ À§ÇØ ·Î±×¿ÀÇÁ°¡ ÇÊ¿äÇÕ´Ï´Ù"
+Write-Output "WebKeeperê°€ ë¹„í™œì„±í™”ë¨"
+Write-Output "WebKeeper í”„ë¡œê·¸ë¨ ì¢…ë£Œë¥¼ ìœ„í•´ ë¡œê·¸ì˜¤í”„ê°€ í•„ìš”í•©ë‹ˆë‹¤"
 
-Write-Host -NoNewline '¾Æ¹« Å°³ª ´­·¯ ·Î±×¿ÀÇÁ...'
+Write-Host -NoNewline 'ì•„ë¬´ í‚¤ë‚˜ ëˆŒëŸ¬ ë¡œê·¸ì˜¤í”„...'
 $null = $Host.UI.RawUI.ReadKey('NoEcho, IncludeKeyDown')
 
 logoff

@@ -1,11 +1,12 @@
 @echo off
 title ClassM Killer
 color 17
+chcp 65001
 
 >nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
 
 if '%errorlevel%' NEQ '0' (
-	echo ½ºÅ©¸³Æ®¸¦ °ü¸®ÀÚ ±ÇÇÑÀ¸·Î ´Ù½Ã ½ÇÇà Áß...
+	echo ìŠ¤í¬ë¦½íŠ¸ë¥¼ ê´€ë¦¬ì ê¶Œí•œìœ¼ë¡œ ë‹¤ì‹œ ì‹¤í–‰ ì¤‘...
 	goto UACPrompt
 ) else ( goto gotAdmin )
 
@@ -20,12 +21,12 @@ if '%errorlevel%' NEQ '0' (
      if exist "%temp%\getadmin.vbs" ( del "%temp%\getadmin.vbs" )
      pushd "%CD%"
      CD /D "%~dp0"
-     
-echo ClassM_Client ¹«·ÂÈ­ ÇÁ·Î±×·¥
+
+echo ClassM_Client ë¬´ë ¥í™” í”„ë¡œê·¸ë¨
 echo.
 sc delete ClassM_Client_Service
 taskkill /F /IM ClassM_Client_Service.exe /T
 taskkill /F /IM ClassM_Client.exe /T
 
-echo ClassM_Client ¹× ClassM_Client_Service°¡ Á¾·áµÇ¾ú½À´Ï´Ù.
+echo ClassM_Client ë° ClassM_Client_Serviceê°€ ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.
 pause
