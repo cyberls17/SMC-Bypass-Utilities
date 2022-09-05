@@ -20,7 +20,7 @@ if '%errorlevel%' NEQ '0' (
      if exist "%temp%\getadmin.vbs" ( del "%temp%\getadmin.vbs" )
      pushd "%CD%"
      CD /D "%~dp0"
-
+     
 echo ClassM_Client 무력화 프로그램
 echo.
 sc delete ClassM_Client_Service
