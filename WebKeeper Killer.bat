@@ -27,8 +27,8 @@ echo.
 
 ICACLS "C:\Program Files (x86)\WebKeeper" /deny user:F
 
-pause >null
 echo WebKeeper가 무력화되었습니다.
 echo 로그오프 후 다시 로그인해주세요.
 echo 아무 키나 누르면 로그오프 됩니다.
+pause >null
 logoff
