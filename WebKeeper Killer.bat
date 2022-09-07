@@ -1,12 +1,11 @@
 @echo off
-title "WebKeeper ë¬´ë ¥í™” í”„ë¡œê·¸ëž¨"
+title WebKeeper ¹«·ÂÈ­ ÇÁ·Î±×·¥
 color 17
-chcp 65001
 
 >nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
 
 if '%errorlevel%' NEQ '0' (
-	echo "ìŠ¤í¬ë¦½íŠ¸ë¥¼ ê´€ë¦¬ìž ê¶Œí•œìœ¼ë¡œ ë‹¤ì‹œ ì‹¤í–‰ ì¤‘..."
+	echo ½ºÅ©¸³Æ®¸¦ °ü¸®ÀÚ ±ÇÇÑÀ¸·Î ´Ù½Ã ½ÇÇà Áß...
 	goto UACPrompt
 ) else ( goto gotAdmin )
 
@@ -22,14 +21,14 @@ if '%errorlevel%' NEQ '0' (
      pushd "%CD%"
      CD /D "%~dp0"
 
-echo "WebKeeper ë¬´ë ¥í™” í”„ë¡œê·¸ëž¨"
-echo "Made by cyberls17"
+echo WebKeeper ¹«·ÂÈ­ ÇÁ·Î±×·¥
+echo Made by cyberls17
 echo.
 
 ICACLS "C:\Program Files (x86)\WebKeeper" /deny user:F
 
-echo "WebKeeperê°€ ë¬´ë ¥í™”ë˜ì—ˆìŠµë‹ˆë‹¤."
-echo "ë¡œê·¸ì˜¤í”„ í›„ ë‹¤ì‹œ ë¡œê·¸ì¸í•´ì£¼ì„¸ìš”."
-echo "ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ë©´ ë¡œê·¸ì˜¤í”„ ë©ë‹ˆë‹¤."
-pause >null
+echo WebKeeper°¡ ¹«·ÂÈ­µÇ¾ú½À´Ï´Ù.
+echo ·Î±×¿ÀÇÁ ÈÄ ´Ù½Ã ·Î±×ÀÎÇØÁÖ¼¼¿ä.
+echo ¾Æ¹« Å°³ª ´©¸£¸é ·Î±×¿ÀÇÁ µË´Ï´Ù.
+pause >nul
 logoff
