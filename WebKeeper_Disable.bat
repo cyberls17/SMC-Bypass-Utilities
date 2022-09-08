@@ -1,5 +1,5 @@
 @echo off
-title ClassM Killer
+title WebKeeper 무력화 프로그램
 color 17
 
 >nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
@@ -21,11 +21,13 @@ if '%errorlevel%' NEQ '0' (
      pushd "%CD%"
      CD /D "%~dp0"
 
-echo ClassM_Client 무력화 프로그램
+echo WebKeeper 무력화 프로그램
+echo Made by cyberls17
 echo.
-sc delete ClassM_Client_Service
-taskkill /F /IM ClassM_Client_Service.exe /T
-taskkill /F /IM ClassM_Client.exe /T
 
-echo ClassM_Client, ClassM_Client_Service가 종료되었습니다.
-pause
+ICACLS "C:\Program Files (x86)\WebKeeper" /deny user:F
+
+echo WebKeeper가 무력화되었습니다.
+echo 아무 키나 누르면 로그오프 됩니다.
+pause >nul
+logoff

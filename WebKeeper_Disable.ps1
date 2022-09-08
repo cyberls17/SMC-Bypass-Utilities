@@ -27,7 +27,7 @@ $ACL | Set-Acl -Path "C:\Program Files\Somansa\PcBoanCare\"
 Write-Output "WebKeeper가 비활성화됨"
 Write-Output "WebKeeper 프로그램 종료를 위해 로그오프가 필요합니다"
 
-Write-Host -NoNewline '아무 키나 눌러 로그오프...'
+Write-Host -NoNewline '아무 키나 눌러 로그오프..'
 $null = $Host.UI.RawUI.ReadKey('NoEcho, IncludeKeyDown')
 
 logoff
